@@ -25,25 +25,29 @@ var getData = function() {
   })
 }
 
-// DISPLAY CONTENT FUNCTION // recieves data and assigns variables in order to create the list elemts to house each individual result.
+// DISPLAY SEARCH CONTENT FUNCTION // recieves data from search query and assigns variables in order to create the list elemts to house each individual result.
 var displayContent = function(data) {
 
   for (i = 0; i < data.length; i++) {
     // Create an li for each job posting
     var jobLiEl = document.createElement("li");
-    jobLiEl.style.marginBottom = "50px"
+    jobLiEl.style.marginBottom = "100px"
     jobsUlEl.appendChild(jobLiEl);
 
     // fill the li with content we want to display from the jobs arrays
-    var jobTitleEl = document.createElement("h3");
-    jobTitleEl.textContent = data[i].title;
-    var jobDateEl = document.createElement("span");
-    jobDateEl.textContent = moment(data[i].publication_date, moment.ISO_8601).format("ddd M/D/YY h:ma");
+    var titleEl = document.createElement("h3");
+    titleEl.textContent = data[i].title + " - " + data[i].company_name.toUpperCase();
+    var dateEl = document.createElement("span");
+    dateEl.textContent = moment(data[i].publication_date, moment.ISO_8601).format("ddd M/D/YY h:ma");
+    var categoryEl = document.createElement("h4");
+    categoryEl.textContent = data[i].category;
+
 
 
     // append content to the created li
-    jobLiEl.appendChild(jobTitleEl);
-    jobLiEl.appendChild(jobDateEl);
+    jobLiEl.appendChild(titleEl);
+    jobLiEl.appendChild(categoryEl);
+    jobLiEl.appendChild(dateEl);
 
   }
   
