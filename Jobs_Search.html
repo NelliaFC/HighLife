@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/Jobs_search_Page.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+  
+<!-- this container will house the list of populated search resluts.  The results are created through a loop function in javascript and will be styled either within javascript via .setattribute or in css using associated id's -->
+  <div id="container" class="">
+    <div style="margin-bottom: 30px;">
+      <h2 style="display: inline;">Sort by: </h2>
+      <label for="categories-dropdown" style="font-weight: bolder;">Category</label>
+      <select name="categories" id="categories-dropdown">
+        <option value="designer">Designer</option>
+        <option value="developer">Developer</option>
+        <option value="engineer">Engineer</option>
+      </select>
+    </div>
+    <!-- Search Results will appear here -->
+    <ul id="jobs-ul" style="list-style: none;">
+    </ul>
+  </div>
+
+
+
+
+
+
+
+<script src="/assets/js/Jobs_Search_Script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

@@ -26,6 +26,23 @@ body {
   background: rgba(0, 0, 0, 0.4);
  
 }
+body{
+	margin:0;
+	padding:0;
+	background:#fafafa;
+    background-image:url(/assets/images/wp9045666.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	color:#fff;
+}
+.main{
+	position: relative;
+	height:100vh;
+	width:100%;
+	top:0;
+	left:0;
+	right:0;  
+    
 
 .main .navbar {
   position: absolute;
@@ -112,101 +129,73 @@ body {
   color: #017fb5;
 }
 
-.main .heading .buttons {
-  height: auto;
-  width: 100%;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+
+.main .heading .buttons{
+	height:auto;
+	width:100%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	position: relative;
 }
-.main .heading .buttons a {
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 300;
-  display: block;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  height: auto;
-  width: 150px;
-  padding: 10px;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-left: 1%;
-  border-radius: 2px;
-  transition: 0.5s ease-in-out;
-  
+.main .heading .buttons a{
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+	font-size:15px;
+	font-weight:300;
+	display:block;
+	border:1px solid rgba(255, 255, 255, 0.5);
+	height:auto;
+	width:150px;
+	padding:10px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin-left:1%;
+	border-radius: 2px;
+	transition: 0.5s ease-in-out;
 }
- .main .heading .buttons a:hover {
-  background: #017fb5;
-  border: 1px solid #017fb5;
-} 
-.main .heading .buttons .btn1 {
-  background: #017fb5;
-  border: 1px solid #017fb5;
+.main .heading .buttons a:hover{
+	background:#017fb5;
+	border:1px solid #017fb5;
 }
-.main .heading .buttons .btn1:hover {
-  background: #017fb5;
-  border: 1px solid #017fb5;
-  color: rgba(255, 255, 255, 0.95); 
+.main .heading .buttons .btn1{
+	background:#017fb5;
+	border:1px solid #017fb5;
 }
-.heading  .wrapper {
-  
-  top: 50%;
-  left: 50%;
-  transform: translate (-50%, -50%);
-  max-width: 550px;
-  padding: 15px;
-  border-radius: 5px;
-  background: rgba(0, 0, 0, 0.5);
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  justify-content: space-between;
+.main .heading .buttons .btn1:hover{
+	background:#017fb5;
+	border:1px solid #017fb5 ;
+	color:rgba(255, 255, 255, 0.95);
 }
-.heading .wrapper .input {
-  width: 80%;
-  padding: 25px 25px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
+.heading .head .wrapper{
+    position: absolute;
+	top:50%;
+    left:50%;
+    transform:translate (-50%, -50%);
+    max-width: 550px;
+    padding:15px;
+    border-radius: 5px;
+    background:rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content:space-between;
 }
-.heading .wrapper .searchbtn {
-  background-color: #017fb5;
-  width: 5%;
-  height: 8vh;
-  border-radius: 5px;
-  position: relative;
-  cursor: pointer;
+#search-input{
+    width:85%;
+    padding: 15px 20px;
+    font-weight: bold;
+    border:none;
+    border-radius: 5px;
 }
-.heading .wrapper .searchbtn .fas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate (-50%, -50%);
-  font-size: 18px;
-}
-@media screen and (max-width: 790px){
-	ul{
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		
-	}
-	li {
-		border:none;
-		margin: 5px;
-	}
-	body {
-		
-		display:flex;
-		flex-direction: column;
-		
-	  }
-	
+.heading .wrapper .searchbtn{
+    background:#017fb5;
+    width:10%;
+    border-radius: 5px;
+    position:relative;
+    cursor: pointer;
+
 }
 
