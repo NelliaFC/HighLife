@@ -8,9 +8,10 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
+		<link rel="stylesheet" href="/assets/css/stylesheet.css">
+	</head>
+	<body>
+
     <img src="" style="width:100%;">
 	<div class="main">
 		<div class="overlay"></div>
@@ -25,21 +26,31 @@
 		</div>
 		<div class="heading">
 				<h1 class="head">Looking for a <span>JOB?</span></h1>
+
+			  <!-- FORM FOR OUR SEARCH IS SENDING CONTENT TO Jobs_search_Page.  WILL MODIFY THIS FURTHER TO INCORPORATE CITY SEARCH FOR AVAILBLE HOMES VIA ZILLOW-->
+				<form action="/Jobs_Search.html" method="get" id="search-form">
+					<input type="text" id="search-input" name="search" placeholder="Enter Keywords for Remote Jobs Search">
+					<button type="submit">Submit This</button>
+				</form>
+
+
 				<div class="wrapper">
-                    <input type="text" class="input" placeholder="What city would you like?">
+                    <!-- <input type="text" class="input" placeholder="What city would you like?"> -->
                     <div class="searchbtn">
                         <i class="fas fa-search-location"></i>
                     </div>
                     
-<p>
-</p>
+	<p>
+	</p>
 </div>
                 
 				<div class="buttons">
-					<a class="btn1" href="#">BUTTON ONE</a>
+					<a class="btn1" id="btn" href="">BUTTON ONE</a>
 					<a class="btn2" href="#">BUTTON TWO</a>
 				</div>	
 		</div>
 	</div>	
+
+	<!-- <script src="/Jobs_Search_Script.js"></script> -->
 </body>
 </html>
