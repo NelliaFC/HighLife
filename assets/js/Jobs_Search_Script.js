@@ -19,8 +19,15 @@ var getData = function() {
   
   fetch(apiUrl).then(function(response) {
     response.json().then(function(data) {
-      displayContent(data.jobs.slice(0, 50));
-      console.log(data.jobs.slice(0, 50))
+      if (!data.jobs.length) {
+        var noResultsEl = document.createElement("h4");
+        noResultsEl.textContent = "Sorry, no matches.  Please be sure to limit your search to tech industry jobs."
+        noResultsEl.classList = "text-center";
+        jobsUlEl.appendChild(noResultsEl);
+      }
+      displayContent(data.jobs.slice(0, 15));
+      console.log(data.jobs.slice(0, 15))
+
     })
   })
 }
@@ -28,27 +35,55 @@ var getData = function() {
 // DISPLAY SEARCH CONTENT FUNCTION // recieves data from search query and assigns variables in order to create the list elemts to house each individual result.
 var displayContent = function(data) {
 
-  for (i = 0; i < data.length; i++) {
-    // Create an li for each job posting
-    var jobLiEl = document.createElement("li");
-    jobLiEl.style.marginBottom = "100px"
-    jobsUlEl.appendChild(jobLiEl);
-
-    // fill the li with content we want to display from the jobs arrays
-    var titleEl = document.createElement("h3");
-    titleEl.textContent = data[i].title + " - " + data[i].company_name.toUpperCase();
-    var dateEl = document.createElement("span");
-    dateEl.textContent = moment(data[i].publication_date, moment.ISO_8601).format("ddd M/D/YY h:ma");
-    var categoryEl = document.createElement("h4");
-    categoryEl.textContent = data[i].category;
-
-
-
-    // append content to the created li
-    jobLiEl.appendChild(titleEl);
-    jobLiEl.appendChild(categoryEl);
-    jobLiEl.appendChild(dateEl);
-
+  // if (!data) {
+  //   var noResultsEl = document.createElement("li");
+  //   jobsUlEl.appendChild(noResultsEl);
+  //   var noResultsTxt = document.createElement("h3");
+  //   noResultsTxt.textContent = "Sorry, no mathces."
+  //   noResultsEl.appendChild(noResultsTxt);
+  // } else {
+    for (i = 0; i < data.length; i++) {
+      // Create an li for each job posting
+      var jobLiEl = document.createElement("li");
+      jobLiEl.classList = "search-result"
+      jobLiEl.style.marginBottom = "50px"
+      jobsUlEl.appendChild(jobLiEl);
+  
+      // fill the li with content we want to display from the jobs arrays
+      var titleEl = document.createElement("h3");
+      var titleAEl = document.createElement("a");
+      titleAEl.setAttribute("href", data[i].url);
+      titleAEl.setAttribute("target", "blank")
+      titleAEl.textContent = data[i].title + " - " + data[i].company_name.toUpperCase();
+      titleEl.appendChild(titleAEl);
+  
+      var urlEL = document.createElement("a");
+      urlEL.setAttribute("href", data[i].url);
+      urlEL.setAttribute("target", "blank");
+      urlEL.classList = "search-link d-block";
+      urlEL.textContent = data[i].url;
+  
+      var pEl = document.createElement("p");
+      pEl.innerHTML = data[i].description;
+      pEl.classList = "overflow-hidden";
+      pEl.style.maxHeight = "80px"
+      
+  
+      var dateEl = document.createElement("span");
+      dateEl.textContent = moment(data[i].publication_date, moment.ISO_8601).format("L");
+  
+      // var categoryEl = document.createElement("h4");
+      // categoryEl.textContent = data[i].category;
+  
+  
+  
+      // append content to the created li
+      jobLiEl.appendChild(titleEl);
+      jobLiEl.appendChild(urlEL);
+      jobLiEl.appendChild(dateEl);
+      jobLiEl.appendChild(pEl);
+      // jobLiEl.appendChild(categoryEl);
+    // }
   }
   
   // description //
