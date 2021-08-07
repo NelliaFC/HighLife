@@ -2,6 +2,15 @@
 var searchFormEl = document.querySelector("#search-form");
 var mainContainerEl = document.querySelector("#container");
 var jobsUlEl = document.querySelector("#jobs-ul");
+var resultLiId = 1
+
+// array to hold the bookmarked elements
+var bookmarkedAr = {
+  title: [],
+  url: [],
+  date: []
+};
+let resultsAr = [];
 
 
 // retrieve input from search bar that was placed in our URL using the GET method in out form.  This variable will be placed at the end of the API URL in our "getData" function as the parameter value. 
@@ -26,7 +35,7 @@ var getData = function() {
         jobsUlEl.appendChild(noResultsEl);
       }
       displayContent(data.jobs.slice(0, 15));
-      console.log(data.jobs.slice(0, 15))
+      // console.log(data.jobs.slice(0, 15))
 
     })
   })
@@ -35,59 +44,74 @@ var getData = function() {
 // DISPLAY SEARCH CONTENT FUNCTION // recieves data from search query and assigns variables in order to create the list elemts to house each individual result.
 var displayContent = function(data) {
 
-  // if (!data) {
-  //   var noResultsEl = document.createElement("li");
-  //   jobsUlEl.appendChild(noResultsEl);
-  //   var noResultsTxt = document.createElement("h3");
-  //   noResultsTxt.textContent = "Sorry, no mathces."
-  //   noResultsEl.appendChild(noResultsTxt);
-  // } else {
-    for (i = 0; i < data.length; i++) {
-      // Create an li for each job posting
-      var jobLiEl = document.createElement("li");
+  for (i = 0; i < data.length; i++) {
+    // Create an li for each job posting
+    var jobLiEl = document.createElement("li");
       jobLiEl.classList = "search-result"
       jobLiEl.style.marginBottom = "50px"
+      jobLiEl.id = "result-" + resultLiId++
       jobsUlEl.appendChild(jobLiEl);
-  
-      // fill the li with content we want to display from the jobs arrays
-      var titleEl = document.createElement("h3");
-      var titleAEl = document.createElement("a");
+
+    var bookmarkBtnEl = document.createElement("button");
+      bookmarkBtnEl.textContent = "Like";
+      bookmarkBtnEl.classList = "btn btn-warning btn-secondary p-0 fs-6 fw-light";
+      jobLiEl.appendChild(bookmarkBtnEl)
+
+    // fill the li with content we want to display from the jobs arrays
+    var titleEl = document.createElement("h3");
+    var titleAEl = document.createElement("a");
       titleAEl.setAttribute("href", data[i].url);
       titleAEl.setAttribute("target", "blank")
       titleAEl.textContent = data[i].title + " - " + data[i].company_name.toUpperCase();
       titleEl.appendChild(titleAEl);
-  
-      var urlEL = document.createElement("a");
+
+    var urlEL = document.createElement("a");
       urlEL.setAttribute("href", data[i].url);
       urlEL.setAttribute("target", "blank");
       urlEL.classList = "search-link d-block";
       urlEL.textContent = data[i].url;
-  
-      var pEl = document.createElement("p");
+
+    var pEl = document.createElement("p");
       pEl.innerHTML = data[i].description;
       pEl.classList = "overflow-hidden";
       pEl.style.maxHeight = "80px"
-      
-  
-      var dateEl = document.createElement("span");
+      pEl.style.maxWidth = "75%"
+    
+    var dateEl = document.createElement("p");
       dateEl.textContent = moment(data[i].publication_date, moment.ISO_8601).format("L");
-  
-      // var categoryEl = document.createElement("h4");
-      // categoryEl.textContent = data[i].category;
-  
-  
-  
-      // append content to the created li
-      jobLiEl.appendChild(titleEl);
-      jobLiEl.appendChild(urlEL);
-      jobLiEl.appendChild(dateEl);
-      jobLiEl.appendChild(pEl);
-      // jobLiEl.appendChild(categoryEl);
-    // }
-  }
-  
-  // description //
 
+  
+
+    // append content to the created li
+    jobLiEl.appendChild(titleEl);
+    jobLiEl.appendChild(urlEL);
+    jobLiEl.appendChild(dateEl);
+    jobLiEl.appendChild(pEl);
+
+    //create an object for each result and push to the global array "resultsAr"
+    var results = {
+      job: jobLiEl,
+    };
+    resultsAr.push(results);
+  }
+  bookmarkedJobs();
+}
+
+// SEND BOOKMARKED JOBS TO LOCAL STORAGE //  We will use the button to send informationfrom the button's parent to a global array then into local storage and repopulate that information in the bookmarks page
+function bookmarkedJobs() {
+  for (i = 0; i < resultsAr.length; i++) {
+    var buttonEl = resultsAr[i].job.childNodes[0];
+    buttonEl.addEventListener("click", function() {
+      this.textContent = "liked";
+      this.classList = "btn btn-secondary p-0 btn-small fw-lighter"
+      // console.log(this.parentElement.childNodes);
+      bookmarkedAr.title.push(this.parentElement.childNodes[1].textContent)
+      bookmarkedAr.url.push(this.parentElement.childNodes[2].textContent)
+      bookmarkedAr.date.push(this.parentElement.childNodes[3].textContent);
+      localStorage.setItem("bookmarked", JSON.stringify(bookmarkedAr));
+      storeLocally();
+    });  
+  }
 }
 
 // CALLS //
