@@ -109,19 +109,27 @@ function bookmarkedJobs() {
       bookmarkedAr.url.push(this.parentElement.childNodes[2].textContent)
       bookmarkedAr.date.push(this.parentElement.childNodes[3].textContent);
       localStorage.setItem("bookmarked", JSON.stringify(bookmarkedAr));
-      storeLocally();
+
+      console.log(bookmarkedAr);
     });  
   }
 }
 
-function storeLocally() {
+function loadBookmarked() {
   var stored = JSON.parse(localStorage.getItem("bookmarked"));
-  
-  var date = stored.date[0];
-  bookmarkedAr.date.push(date);
-
-  console.log(bookmarkedAr);
+  // console.log(stored);
+  if(!stored) {
+    var bookmarkedAr = {
+      title: [],
+      url: [],
+      date: []
+    };
+    console.log("nothing to load");
+  } else {
+    console.log(stored.title[0]);
+  }
 }
 
 // CALLS //
+loadBookmarked();
 getData();
