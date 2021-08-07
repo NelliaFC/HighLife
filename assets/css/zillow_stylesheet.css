@@ -1,0 +1,174 @@
+html,
+body,
+div,
+#zillow-large-search-box-widget-container {
+    width: 432px;
+    overflow: hidden;
+    background-color: #e7f1fd;
+    color: #555;
+    font: normal normal normal 13px verdana, arial, sans-serif;
+    line-height: 13px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #adcfff;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+h1,
+#Find-Homes-Based-On-Job-City-State-Zipcode {
+    color: #d61;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: normal;
+    float: left;
+    width: 200px;
+    margin-left: 10px;
+    margin-top: 5px;
+    letter-spacing: 0;
+    text-transform: none;
+    font: 200px;
+}
+
+div,
+#image {
+    border: 0;
+}
+
+div {
+    float: right;
+}
+
+table,
+#zillow-tnc-widget-footer-links {
+    width: 100%;
+    font: normal normal normal 10px verdana, arial, sans-serif;
+    text-align: left;
+    line-height: 12px;
+    margin: 10px 5px;
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tbody {
+    margin: 0;
+    padding: 0;
+}
+
+tr {
+    margin: 0;
+    padding: 0;
+}
+
+td,
+#Quick-Links {
+    font-weight: bold;
+    font-size: 10px;
+    color: #555;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    font-weight: bold;
+    font-size: 10px;
+    color: #555;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #36b;
+    font-family: verdana, arial, sans-serif;
+    font-size: 10px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+#MortgageRates {
+    color: #36b;
+    font-family: verdana, arial, sans-serif;
+    font-size: 10px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+td {
+    margin: 0;
+    padding: 0
+}
+
+a,
+#Refinancing {
+    color: #36b;
+    font-family: verdana, arial, sans-serif;
+    font-size: 10px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+tr {
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+#Austin {
+    color: #36b;
+    font-size: 10px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+td {
+    color: #36b;
+    font-size: 10px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a,
+#MortgageCalculators {
+    color: #36b;
+    font-size: 10px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+#PurchaseLoans {
+    margin: 0;
+    padding: 0;
+}
