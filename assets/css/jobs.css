@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+*{
+    font-family: "Merriweather" ;
+   
+}
+
 header{
-background-image: url(wp9045192.jpg);
+    background-image:  url("../images/wp9045177.webp")
 
 }
-body{
-    background:rgb(221, 224, 250);
-   
-    }                
+             
     .ibox-content {
         background-color: #FFFFFF;
         color: inherit;
@@ -14,6 +17,8 @@ body{
         border-image: none;
         border-style: solid solid none;
         border-width: 1px 0px;
+       
+        
     }
     
     .search-form {
@@ -30,7 +35,7 @@ body{
     }
     
     .search-result p {
-        font-size: 12px;
+        font-size: 13px;
         margin-top: 7px;
     }
     
@@ -47,6 +52,3 @@ body{
         font-weight: 100;
     }
 
-
-    
-                        

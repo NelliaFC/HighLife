@@ -7,7 +7,7 @@ body{
 	margin:0;
 	padding:0;
 	background:#fafafa;
-    background-image:url(assets/images/wp9045666.jpg);
+    background-image: url("../images/wp9045666.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 	color:#fff;
@@ -141,6 +141,14 @@ body{
 	border-radius: 2px;
 	transition: 0.5s ease-in-out;
 }
+#colorbutton {
+	 
+		background-color: #017fb5;
+		border-radius: 5px;
+		width: 3.75vw;
+		margin-left: 1%;
+	
+}
 .main .heading .buttons a:hover{
 	background:#017fb5;
 	border:1px solid #017fb5;
@@ -154,20 +162,23 @@ body{
 	border:1px solid #017fb5 ;
 	color:rgba(255, 255, 255, 0.95);
 }
-.heading .head .wrapper{
-    position: absolute;
-	top:50%;
-    left:50%;
-    transform:translate (-50%, -50%);
+.heading .wrapper{
+   
+	top: 50%;
+    left: 50%;
+    transform: translate (-50%, -50%);
     max-width: 550px;
-    padding:15px;
+    padding: 15px;
     border-radius: 5px;
-    background:rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 #search-input{
-    width:85%;
+    width:50%;
+	height:4.3vh;
     padding: 15px 20px;
     font-weight: bold;
     border:none;
