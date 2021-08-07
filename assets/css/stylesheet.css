@@ -7,7 +7,7 @@ body{
 	margin:0;
 	padding:0;
 	background:#fafafa;
-    background-image:url(wp9045666.jpg);
+    background-image:url(/assets/images/wp9045666.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 	color:#fff;
@@ -166,7 +166,7 @@ body{
     display: flex;
     justify-content:space-between;
 }
-.heading .wrapper .input{
+#search-input{
     width:85%;
     padding: 15px 20px;
     font-weight: bold;
