@@ -114,5 +114,14 @@ function bookmarkedJobs() {
   }
 }
 
+function storeLocally() {
+  var stored = JSON.parse(localStorage.getItem("bookmarked"));
+  
+  var date = stored.date[0];
+  bookmarkedAr.date.push(date);
+
+  console.log(bookmarkedAr);
+}
+
 // CALLS //
 getData();
