@@ -108,8 +108,9 @@ body{
 	color:#fff;
 }
 /* style the word JOB in different color*/
+/* changed class name so that not all spans have to be blue */
 
-.main .heading .head span{
+.main .heading .head .bluetextspan{
 	color:#017fb5;
 }
 
