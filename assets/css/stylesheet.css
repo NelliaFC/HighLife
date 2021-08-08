@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu&display=swap');
 *{
-    font-family: "Nunito" , sans-serif;
+    font-family: "Merriweather";
 
 }
 body{
@@ -12,6 +12,7 @@ body{
     background-size: cover;
 	color:#fff;
 }
+
 .main{
 	position: relative;
 	height:100vh;
@@ -179,7 +180,7 @@ body{
 }
 #search-input{
     width:50%;
-	height:4.3vh;
+	height:4.vh;
     padding: 15px 20px;
     font-weight: bold;
     border:none;
