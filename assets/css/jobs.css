@@ -18,6 +18,7 @@ header{
         border-style: solid solid none; 
         border-width: 1px 0px;    
         background-image: url("../images/header-cloud.jpg"); 
+        background-repeat: no-repeat;
     }
     /* .contaner{
         background-image: url("../images/header-cloud.jpg");
