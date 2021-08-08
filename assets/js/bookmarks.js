@@ -1,19 +1,56 @@
-
+var bookmarksUlEl = document.querySelector("#bookmarks-container");
 var gotten = JSON.parse(localStorage.getItem("bookmarked"));
-console.log(gotten)
+var loadedResultsAr = [];
 
-for (i = 0; i < gotten.title.length; i++) {
-  var title = document.createElement("h3");
-  title.textContent = gotten.title[i];
-  var url = document.createElement("a");
-  url.setAttribute("href", gotten.url[i]);
-  url.setAttribute("target", "blank");
-  url.textContent = gotten.url[i];
-  var date = document.createElement("p");
-  date.classList = "mb-5"
-  date.textContent = gotten.date[i];
 
-  document.querySelector("body").appendChild(title);
-  document.querySelector("body").appendChild(url);
-  document.querySelector("body").appendChild(date)
+// DISPLAY RESULTS FROM LOCAL STORAGE //  In order to do this we take the data from local storage (gotten) and loop through it using the "for" loop iterator.  As we loop through the data we create elements to display in the page
+function displayLoadedResults() {
+  console.log(gotten);
+
+  for (i = 0; i < gotten.length; i++) {
+    // Create elements to hold data from localStorage
+
+    // CREATE TITLE ELEMENT
+    var title = document.createElement("h3");
+      // add classes to style the title element
+      title.classList = ""
+      title.textContent = gotten[i].title;
+
+    // CREATE URL ELEMENT
+    var url = document.createElement("a");
+      // add classes to style the url element
+      url.classList ="";
+      url.setAttribute("href", gotten[i].url);
+      url.textContent = gotten[i].url.substring(0, 19);
+
+    var location = document.createElement("h5");
+      // add classes to style the url element
+      location.classList = "";
+      location.textContent = gotten[i].location
+
+    
+    // CREATE DATE ELEMENT
+    var date = document.createElement("p");
+      // add classes to style the url element
+      date.classList = "";
+      date.textContent = gotten[i].date;
+
+
+
+
+
+    // APPEND THE ELEMENTS TO THE BOOKMARKS UL
+    bookmarksUlEl.appendChild(title);
+    bookmarksUlEl.appendChild(url);
+    bookmarksUlEl.appendChild(location);
+    bookmarksUlEl.appendChild(date);
+  }
 }
+
+
+
+
+// CALLS //
+displayLoadedResults();
+
+
