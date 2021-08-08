@@ -1,12 +1,26 @@
 
-var bookmarksUlEl = document.querySelector("#bookmarks-container");
-var gotten = JSON.parse(localStorage.getItem("bookmarked"));
-var loadedResultsAr = [];
-
-
 // DISPLAY RESULTS FROM LOCAL STORAGE //  In order to do this we take the data from local storage (gotten) and loop through it using the "for" loop iterator.  As we loop through the data we create elements to display in the page
 function displayLoadedResults() {
-  console.log(gotten);
+
+  var bookmarkedJobsList = JSON.parse(localStorage.getItem("bookmarked"));
+    console.log(bookmarkedJobsList)
+
+ for (i = 0; i < bookmarkedJobsList.length; i++) {
+   var title = bookmarkedJobsList[i].title;
+   var location = bookmarkedJobsList[i].location;
+   var url = bookmarkedJobsList[i].url;
+   var date = bookmarkedJobsList[i].date;
+   var htmlCode = '<li class="collection-item avatar blue lighten-5">'+
+   '<i class="material-icons circle blue darken-4">home</i>'+
+  '<span class="title">'+title+'</span>'+ 
+   '<p>'+location +'<br>'+url +'<br>'+
+      date +
+   '</p>'+
+   '<a href="#!" class="secondary-content"><i class="material-icons red-text">favorite</i></a>'+
+ '</li>'
+   $('#listJobFavorites').append(htmlCode);
+ }
+ /* console.log(gotten);
 
   for (i = 0; i < gotten.length; i++) {
     // Create elements to hold data from localStorage
@@ -45,33 +59,14 @@ function displayLoadedResults() {
     bookmarksUlEl.appendChild(url);
     bookmarksUlEl.appendChild(location);
     bookmarksUlEl.appendChild(date);
+    */
   }
-}
+
 
 
 
 
 // CALLS //
 displayLoadedResults();
-
-
-
-// var bookmarkedJobsList = JSON.parse(localStorage.getItem("bookmarked"));
-// console.log(bookmarkedJobsList)
-
-// for (i = 0; i < bookmarkedJobsList.title.length; i++) {
-//   var title = bookmarkedJobsList.title[i];
-//   var url = bookmarkedJobsList.url[i];
-//   var date = bookmarkedJobsList.date[i];
-//   var htmlCode = '<li class="collection-item avatar blue lighten-5">'+
-//   '<i class="material-icons circle blue darken-4">home</i>'+
-//   '<span class="title">'+title+'</span>'+
-//   '<p>'+url +'<br>'+
-//      date +
-//   '</p>'+
-//   '<a href="#!" class="secondary-content"><i class="material-icons red-text">favorite</i></a>'+
-// '</li>'
-//   $('#listJobFavorites').append(htmlCode);
-// }
 
 
