@@ -19,48 +19,8 @@ function displayLoadedResults() {
    '<a href="#!" class="secondary-content"><i class="material-icons red-text">favorite</i></a>'+
  '</li>'
    $('#listJobFavorites').append(htmlCode);
- }
- /* console.log(gotten);
-
-  for (i = 0; i < gotten.length; i++) {
-    // Create elements to hold data from localStorage
-
-    // CREATE TITLE ELEMENT
-    var title = document.createElement("h3");
-      // add classes to style the title element
-      title.classList = ""
-      title.textContent = gotten[i].title;
-
-    // CREATE URL ELEMENT
-    var url = document.createElement("a");
-      // add classes to style the url element
-      url.classList ="";
-      url.setAttribute("href", gotten[i].url);
-      url.textContent = gotten[i].url.substring(0, 19);
-
-    var location = document.createElement("h5");
-      // add classes to style the url element
-      location.classList = "";
-      location.textContent = gotten[i].location
-
-    
-    // CREATE DATE ELEMENT
-    var date = document.createElement("p");
-      // add classes to style the url element
-      date.classList = "";
-      date.textContent = gotten[i].date;
-
-
-
-
-
-    // APPEND THE ELEMENTS TO THE BOOKMARKS UL
-    bookmarksUlEl.appendChild(title);
-    bookmarksUlEl.appendChild(url);
-    bookmarksUlEl.appendChild(location);
-    bookmarksUlEl.appendChild(date);
-    */
-  }
+ }  
+}
 
 
 
