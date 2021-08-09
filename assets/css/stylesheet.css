@@ -114,7 +114,11 @@ body{
 	color:#017fb5;
 }
 
-
+.main .heading .input #job-search{
+	width: 20px;
+	height: 20px;
+	color:aqua;
+}
 .main .heading .buttons{
 	height:auto;
 	width:100%;
@@ -188,7 +192,7 @@ body{
 }
 .heading .wrapper .searchbtn{
     background:#017fb5;
-    width:10%;
+    width:8%;
     border-radius: 5px;
     position:relative;
     cursor: pointer;

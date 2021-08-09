@@ -4,7 +4,8 @@
 
 }
 
-header{
+header
+{
     /* background-image:  url("../images/wp9045177.webp"); */
 
 }
@@ -22,7 +23,7 @@ header{
         border-image: none;
         border-style: solid solid none; 
         border-width: 1px 0px;    
-        /* background-image: url("../images/header-cloud.jpg");  */
+        background-image: url("../images/header-cloud.jpg"); 
         background-repeat: no-repeat;
     }
     /* .contaner{
