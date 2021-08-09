@@ -7,7 +7,7 @@ body{
 	margin:0;
 	padding:0;
 	background:#fafafa;
-    background-image: url("../images/wp9045666.jpg");
+    background-image: url("../images/wp9045710.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 	color:#fff;
@@ -28,7 +28,7 @@ body{
 	top:0;
 	left:0;
 	width:100%;
-	height:100%;
+	height: 100%;
 	background:rgba(0, 0, 0, 0.5);
 	z-index: 0;
 
@@ -106,6 +106,9 @@ body{
 	font-size:48px;
 	font-weight: 600; 
 	color:#fff;
+}
+.main .heading p{
+	font-size: x-large;
 }
 /* style the word JOB in different color*/
 /* changed class name so that not all spans have to be blue */
