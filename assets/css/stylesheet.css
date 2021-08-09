@@ -202,3 +202,14 @@ body{
     font-size: 18px;
 
 } 
+
+.jobFavoritesDiv{
+	top: 250px;
+}
+.bookmarksHeaderDiv{
+	top: 175px;
+	position: relative;
+	font-size:48px;
+	font-weight: 600; 
+	color:#fff;
+}

@@ -129,6 +129,12 @@ var displayContent = function(data) {
 
 // SEND BOOKMARKED JOBS TO LOCAL STORAGE //  We will use the button to send informationfrom the button's parent to a global array then into local storage and repopulate that information in the bookmarks page
 function bookmarkedJobs() {
+  var bookmarkedJobsList = JSON.parse(localStorage.getItem("bookmarked"));
+  if (bookmarkedJobsList) {
+    bookmarkedAr = bookmarkedJobsList
+  }
+
+
   for (i = 0; i < resultsAr.length; i++) {
     var buttonEl = resultsAr[i].job.childNodes[0];
     buttonEl.addEventListener("click", function() {
