@@ -20,25 +20,6 @@ var state = url.searchParams.get("state")
 
 // FETCH FUNTION // retrieves the data, converts the data from XML to JSON for object data handling and send that object to displayContent function
 // var getData = function() {
-
-//   var apiUrl = "https://remotive.io/api/remote-jobs?search=" + nameIsh;
-  
-//   fetch(apiUrl).then(function(response) {
-//     response.json().then(function(data) {
-//       if (!data.jobs.length) {
-//         var noResultsEl = document.createElement("h4");
-//         noResultsEl.textContent = "Sorry, no matches.  Please be sure to limit your search to tech industry jobs."
-//         noResultsEl.classList = "text-center";
-//         jobsUlEl.appendChild(noResultsEl);
-//       }
-//       displayContent(data.jobs.slice(0, 15));
-//       // console.log(data.jobs.slice(0, 15))
-
-//     })
-//   })
-// }
-
-
 var getJoobleData = function() {
   var url = "https://jooble.org/api/";
   var key = "2877bf7c-37ce-47d1-9328-901ec0b873a4";
@@ -57,7 +38,7 @@ var getJoobleData = function() {
   http.onreadystatechange = function() {
     if(http.readyState == 4 && http.status == 200) {
       var response = JSON.parse(http.responseText);
-      displayContent(response.jobs.slice(0, 10));
+      displayContent(response.jobs.slice(0, 20));
       // geocorderApi(response.jobs.slice(0, 10));
       console.log(response.jobs);
     }
@@ -65,6 +46,8 @@ var getJoobleData = function() {
   //Send request to the server
   http.send(params);
 }
+
+
 
 // DISPLAY SEARCH CONTENT FUNCTION // recieves data from search query and assigns variables in order to create the list elemts to house each individual result.
 var displayContent = function(data) {
