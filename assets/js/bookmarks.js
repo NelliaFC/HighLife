@@ -11,7 +11,7 @@ function displayLoadedResults() {
    var url = bookmarkedJobsList[i].url;
    var date = bookmarkedJobsList[i].date;
    var htmlCode = '<li class="collection-item avatar blue lighten-5">'+
-   '<i class="material-icons circle blue darken-4">home</i>'+
+   '<i class="material-icons circle blue darken-4">work</i>'+
   '<span class="title">'+title+'</span>'+ 
    '<p>'+location +'<br>'+url +'<br>'+
       date +
