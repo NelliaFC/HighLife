@@ -20,7 +20,7 @@
         border-image: none;
         border-style: solid solid none; 
         border-width: 1px 0px;    
-        background-image: url("../images/header-cloud.jpg"); 
+        /* background-image: url("../images/header-cloud.jpg");  */
         background-repeat: no-repeat;
         
     }
@@ -51,7 +51,7 @@
         color: #ffffff;
         background-color: #ffffff;
         height: 1px;
-        margin: 20px 0;
+        margin: 30px;
     }
     
     h2 {
