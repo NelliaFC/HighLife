@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu&display=swap');
 *{
     font-family: "Merriweather";
-  
 
 }
 
@@ -13,7 +12,7 @@
 }
              
     .ibox-content {
-        background-color: #FFFFFF;
+        background-color:#be7e7ec9;
         color: inherit;
         /* padding: 15px 20px 20px 20px; */
         border-color: #E7EAEC;
@@ -30,6 +29,9 @@
      */
     .search-form {
         margin-top: 10px;
+    }
+    li#result-1 .search-result{
+        background-color: #E7EAEC;
     }
     
     .search-result h3 {
