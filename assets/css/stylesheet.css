@@ -201,3 +201,21 @@ body{
     font-size: 18px;
 
 } 
+
+.jobFavoritesDiv{
+	top: 200px;
+}
+.bookmarksHeaderDiv{
+	top: 175px;
+	position: relative;
+	font-size:48px;
+	font-weight: 600; 
+	color:#fff;
+}
+.bookmarksBody{
+	background-color:grey;
+	background-size: 100%;
+	background-attachment:fixed;
+	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/wp9045192.jpg);
+
+}
