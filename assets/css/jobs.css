@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu&display=swap');
-*{
+* {
     font-family: "Merriweather";
-   
 }
 body{
     background-color: rgb(245, 245, 248);
