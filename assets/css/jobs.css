@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu&display=swap');
 *{
     font-family: "Merriweather";
-
+   
 }
-
-
 .jumbotron-fluid{
     background-image:  url("../images/wp9045177.webp");
     background-size: auto;
@@ -14,29 +12,37 @@
     .ibox-content {
         background-color:#be7e7ec9;
         color: inherit;
-        /* padding: 15px 20px 20px 20px; */
         border-color: #E7EAEC;
         border-image: none;
         border-style: solid solid none; 
-        border-width: 1px 0px;    
-        /* background-image: url("../images/header-cloud.jpg");  */
-        background-repeat: no-repeat;
+        border-width: 1px 0px;  
+       
         
     }
-    /* .contaner{
-        background-image: url("../images/header-cloud.jpg");
+
+     .row .overlay{
+        position: absolute;
+        top: 100px;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgb(0, 0, 0, 0.2);
+       
+    
     }
-     */
     .search-form {
         margin-top: 10px;
+        
     }
     li#result-1 .search-result{
         background-color: #E7EAEC;
+      
     }
-    
+   
     .search-result h3 {
         margin-bottom: 0;
         color: #1E0FBE;
+       
     }
     
     .search-result .search-link {
@@ -54,11 +60,32 @@
         background-color: #ffffff;
         height: 1px;
         margin: 30px;
+       
     }
+    /* .hr-line-dashed .overlay{
+        position: absolute;
+        top: 100px;
+        left:0;
+        width:100%;
+        height:100%;
+        background:rgb(0, 0, 0, 0.2);
+
+    } */
     
     h2 {
         font-size: 15px;
         font-weight: 100;
         
     }
+    a {
+        font-size: large;
+        font-family: "Merriweather";
+        color:rgb(22, 82, 247);
+      
+    }
+    .ul#jobs-ul .search-result{
+        background:rgb(0, 0, 0, 0.2);
+       
+    }
+    
 
