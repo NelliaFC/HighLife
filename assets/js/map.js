@@ -46,7 +46,7 @@ function geocorderApi(data) {
       container: 'map',
       style: `https://api.maptiler.com/maps/streets/style.json?key=k6wTdV4beDzqePVBVpfz`,
       center: [-95.7129, 37.0902],
-      zoom: 1.75
+      zoom: 3.75
       
   }); 
 
