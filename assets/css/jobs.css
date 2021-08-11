@@ -3,35 +3,53 @@
     font-family: "Merriweather";
    
 }
-.jumbotron-fluid{
+body{
+    background-color: rgb(245, 245, 248);
+}
+.jumbotron .jumbotron-fluid{
     background-image:  url("../images/wp9045177.webp");
     background-size: auto;
-
 }
              
     .ibox-content {
-        background-color:#be7e7ec9;
-        color: inherit;
+        /* background-color:#be7e7ec9; */
         border-color: #E7EAEC;
         border-image: none;
         border-style: solid solid none; 
         border-width: 1px 0px;  
-       
-        
+           
+    }
+    .input-group {
+    position: relative;
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: left;
+    
+    /* padding-inline-end: 30px; */
+   
+    }
+    select#state-search{
+       padding: 1px 2px;
+       margin: 0px 0px 0px 0px;
+       border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    
+
+
+    }
+    button.btn.btn-lg.btn-primary{
+        color: #e7eaec;
+        padding: 5px 2px;
+        font-size: 20px ;
     }
 
-     .row .overlay{
-        position: absolute;
-        top: 100px;
-        left:0;
-        width:100%;
-        height:100%;
-        background:rgb(0, 0, 0, 0.2);
-       
-    
-    }
     .search-form {
         margin-top: 10px;
+        /* background:rgb(0, 0, 0, 0.2); */
+        /* background-color: #be7e7ec9; */
         
     }
     li#result-1 .search-result{
@@ -55,11 +73,11 @@
     }
     
     .hr-line-dashed {
-        border-top: 1px dashed #E7EAEC;
+        /* border-top: 1px dashed #E7EAEC; */
         color: #ffffff;
-        background-color: #ffffff;
+        /* background-color: #ffffff; */
         height: 1px;
-        margin: 30px;
+        margin: 50px;
        
     }
     /* .hr-line-dashed .overlay{
@@ -83,9 +101,32 @@
         color:rgb(22, 82, 247);
       
     }
-    .ul#jobs-ul .search-result{
-        background:rgb(0, 0, 0, 0.2);
+    /* .ul#jobs-ul.search-result{
+        background:rgb(0, 0, 0, 0.2); */
        
-    }
     
+    .bookmark{
+        /* background-color: rgb(0, 0, 0, 0.4); */
 
+    }
+    .bookmark a{
+        color: rgb(255, 245, 233);
+      
+
+    }
+    .container h1{
+        color:rgb(238, 226, 226);
+            background:rgba(0, 0, 0, 0.4);
+            width:100%;
+            height: 100px;
+            font-family: "merriweather";
+            font-size: 50px;
+        }
+        #search-result{
+           
+            background-color: #6c85c7c9;
+        }
+
+.usa{
+    margin-left: 20px;
+}

@@ -13,26 +13,32 @@
 <div class="container">
 <!-- <div class="container bootstrap"> -->
   
-    </div>
+    <!-- </div> -->
 
   <div class="row">
     <div class="overlay"></div>
       <div class="col-lg-12">
         <div class="ibox float-e-margins">
           <div id="container" class="ibox-content">
-            <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/wp9045192.jpg); background-size: 100%;">
+            <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/images/highskyline.jpg); background-size: 100%;">
               <div class="container">
-                <h1 class="display-4">Move It</h1>
+                <h1 class="display-4">Move It!</h1>
                 
                 <div class="search-form">
                   <!-- <div class="overlay"></div> -->
                   
-
+                  <div class="bookmark">
                   <a href="bookmarks.html">Bookmarks</a>
+                </div>
                  
                   <form action="" method="get">
                     <div class="input-group">
                       <input type="text" id="job-search" name="keyword" placeholder="Enter Keywords">
+                      <div class="input-group-btn">
+                        <button class="btn btn-lg btn-primary" type="submit" name="submit-jobs">
+                            Search
+                        </button>
+                      </div>
                       <select name="state" id="state-search">
                         <option value="USA">United States</option>
                         <option value="AL">Alabama</option>
@@ -87,51 +93,35 @@
                         <option value="WI">Wisconsin</option>
                         <option value="WY">Wyoming</option>
                       </select>
-                      <br>
-                      <div class="input-group-btn">
-                        <button class="btn btn-lg btn-primary" type="submit" name="submit-jobs">
-                            Search
-                        </button>
-                      </div>
+                      
                     
-              
+                    
+  
                       <div class="input-group-btn">
                         <button class="btn btn-lg btn-primary" type="submit" formaction="map.html">
                             Search Map
                             
                         </button>
                       </div>
+                      <div id="container" class="ibox-content"></div>
                     </div>
                   </form>
-                  
+                </div>
 
                 </div>
     
                 <div class="hr-line-dashed"></div>
               </div>
             </div>
-            <!-- <div class="search-form"> -->
-              
+            <div class="search-form" id="search-result">
 
-              <!-- <a href="bookmarks.html">bookmarks</a>
               
-              <form action="" method="get">
-                <div class="input-group">
-                  <input type="text" placeholder="" name="search" class="form-control input-lg">
-                  <div class="input-group-btn">
-                    <button class="btn btn-lg btn-primary" type="submit">
-                        Search
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div> -->
             
             <div class="hr-line-dashed"></div>
          
             <ul class="search-result" style="list-style: none;" id="jobs-ul">
-              <div class="overlay"></div>
-              
+            
+               
               <!-- The search results will populate here! -->
             </ul>
             
