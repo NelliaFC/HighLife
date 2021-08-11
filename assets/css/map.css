@@ -1,9 +1,13 @@
-
 form {
     position: absolute;
     left: 450px;
-    top: 100px;
+    top: 200px;
     z-index: 1;
+}
+
+#map {
+    height: 100%;
+    width: 200%;
 }
 
 #map {
@@ -17,37 +21,125 @@ form {
 /* Set the size of the div element that contains the map */
 
 #map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-    height: 120%;
-    /* The height is 100% pixels */
+    position: absolute;
+    top: 0;
+    bottom: 0;
     width: 100%;
-    /* The width is the width of the web page */
-    right: 0;
-    left: 0;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px;
+    background: #D6E9FE;
+}
+
+.main .navbar {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    margin: 2% 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.main .navbar .logo {
+    position: relative;
+    height: auto;
+    width: 20%;
+    left: 10%;
+    float: left;
+    font-size: 35px;
+    font-weight: bolder;
+    cursor: pointer;
+    text-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.2);
+    transition: 0.1s ease-in-out;
+}
+
+.main .navbar .logo:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.main .navbar ul {
+    position: relative;
+    float: right;
+    width: 50%;
+    right: -25%;
+    height: auto;
+    margin: auto;
+}
+
+.main .navbar ul li {
+    list-style-type: none;
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.1s ease-in-out;
+    box-sizing: border-box;
+}
+
+.main .navbar ul li a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+    display: block;
+}
+
+
+/*style navbar to have a shadow backdrop when hovering */
+
+.main .navbar ul li:hover {
+    background: rgba(249, 249, 249, 0.4);
+}
+
+.main .heading {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    text-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main .heading .head {
+    position: relative;
+    font-size: 48px;
+    font-weight: 600;
+    color: black;
 }
 
 .navbar {
     height: 80px;
     background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     z-index: 100;
     transition: background-color 1s ease 0s;
 }
 
 .navbar-default {
     .navbar-brand {
-        margin-top: 10px;
-        color: white;
-        &:hover {
-            color: #C57ED3;
-            border: 1px solid black;
+        {
+            margin-top: 10px;
+            color: black;
         }
-    }
+        hover {
+            color: #C57ED3;
+            border: 1px solid #C57ED3;
+        }
+    
     .navbar-nav {
         li {
             a {
@@ -64,7 +156,7 @@ form {
                 color: #C57ED3;
                 text-decoration: none;
             }
-        } //end li
+        }
         .active {
             a,
             a:hover,
@@ -73,10 +165,11 @@ form {
                 color: #C57ED3;
             }
         }
-    } //end .navbar-nav
-    //Collapsed styles
+    }
+    /* NavBar-Nav ended*/
+    /*Collapsed styles*/
     .navbar-toggle {
-        border-color: black;
+        border-color: #C57ED3;
         &:hover,
         &:focus {
             background-color: #490D40;
@@ -89,24 +182,30 @@ form {
     .navbar-collapse.collapse.in ul {
         background-color: #490D40;
     }
-} //end .navbar-default
+}
+
+
+/* .navbar-default ended*/
+
 
 /* Solid class attached on scroll past first section */
 
 .navbar.solid {
-    background-color: #490D40;
-    transition: background-color 1s ease 0s;
-    box-shadow: 0 0 4px grey;
+    {
+        background-color: #490D40;
+        transition: background-color 1s ease 0s;
+        box-shadow: 0 0 4px grey;
+    }
     .navbar-brand {
         color: #C57ED3;
         transition: color 1s ease 0s;
     }
     .navbar-nav {
-        >li {
-            >a {
+        li {
+            a {
                 color: #C57ED3;
                 transition: color 1s ease 0s;
             }
-        } //end li
-    } //end .navbar-nav
+        }
+    }
 }
