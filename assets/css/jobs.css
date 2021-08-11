@@ -11,7 +11,7 @@ body{
 }
              
     .ibox-content {
-        /* background-color:#be7e7ec9; */
+        
         border-color: #E7EAEC;
         border-image: none;
         border-style: solid solid none; 
@@ -104,10 +104,7 @@ body{
         background:rgb(0, 0, 0, 0.2); */
        
     
-    .bookmark{
-        /* background-color: rgb(0, 0, 0, 0.4); */
 
-    }
     .bookmark a{
         color: rgb(255, 245, 233);
       
@@ -123,7 +120,7 @@ body{
         }
         #search-result{
            
-            background-color: #6c85c7c9;
+            background-color: #668ab9c9;
         }
 
 .usa{
