@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu&display=swap');
 * {
-    font-family: "Merriweather";}
+    font-family: "Merriweather";
+}
 
 form {
     position: absolute;
-    left: 450px;
-    top: 200px;
+    left: 50px;
+    top: 135px;
     z-index: 1;
 }
 
@@ -209,7 +210,7 @@ form {
             a {
                 color: #C57ED3;
                 transition: color 1s ease 0s;
-            }
+            
         }
     }
 }
