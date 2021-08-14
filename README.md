@@ -1,4 +1,7 @@
 # HighLife
+## HighLife
+### HighLife
+#### HighLife
 I want to move to another city and search for a job in that city
 I want to have the option to search for houses around that city
 I want to use the search bar to select for the city i am interested in moving to
