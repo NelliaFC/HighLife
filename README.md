@@ -48,7 +48,7 @@ I want to know the the housing prices based on the location I searched for
 ```
 Kyla Scott, created _________. username
 Nellia Fleurova-Char, created ________. username
-JTorres, created ________. username
+J Torres, created the javascript for the three APIs and search results. itorres60
 Waleed Baig, created ________. username
 Guillermo Bernal, created the bookmarks page and helped with the README.md . guillermobernal
 ```
