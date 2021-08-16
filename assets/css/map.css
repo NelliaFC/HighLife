@@ -133,7 +133,7 @@ form {
     z-index: 100;
     transition: background-color 1s ease 0s;
 }
-
+/* 
 .navbar-default {
     .navbar-brand {
         {
@@ -210,7 +210,7 @@ form {
             a {
                 color: #C57ED3;
                 transition: color 1s ease 0s;
-            }
+            
         }
     }
-}
+} */
