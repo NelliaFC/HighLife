@@ -35,7 +35,7 @@ I want to know the the housing prices based on the location I searched for
 
 ![bookmarks screenshot](./assets/images/bookmarksSS.PNG)
 
-![map screenshot](./assets/images/mapSS.PNG)
+![map screenshot](./assets/images/mapSS.png)
 
 
 ## Live Link
